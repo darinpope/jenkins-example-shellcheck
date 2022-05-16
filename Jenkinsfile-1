@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Process') {
       steps {
-        sh 'shellcheck example-1.sh'
+        sh 'shellcheck --color=never example-1.sh'
       }
     }
   }
