@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Help') {
+      steps {
+        sh 'shellcheck --help'
+      }
+    }
+    stage('Version') {
+      steps {
+        sh 'shellcheck --version --color=never'
+      }
+    }
+  }
+}
