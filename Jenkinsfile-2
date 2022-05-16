@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Process') {
+      steps {
+        sh 'shellcheck --color=never --severity=error example-1.sh'
+      }
+    }
+  }
+}
